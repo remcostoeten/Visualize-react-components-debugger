@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "build": "tsup",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "name": "visualize-component-package",
+  "version": "0.0.1",
+  "description": "Visualize react components.",
+  "main": "./dist/ndex.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "keywords": [
+    "react",
+    "component",
+    "visualize",
+    "debug",
+    "nextJS"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
