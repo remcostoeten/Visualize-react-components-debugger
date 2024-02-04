@@ -1,7 +1,7 @@
-'use client'
 import React, { ReactNode, useEffect, useState } from "react";
 
-const devMode = process.env.NODE_ENV !== 'production'
+const validPorts = ['3000', '3001', '9001', '9000', '8000', '8888'];
+const devMode = validPorts.includes(window.location.port);
 
 type visualizeProps = {
     showAlert?: boolean,
