@@ -2,7 +2,7 @@
   "scripts": {
     "build": "tsc --build"
   },
-  "name": "visualize-component-debugger",
+  "name": "@remcostoeten/visualize-component-debugger",
   "version": "1.0.3",
   "author": "Remco Stoeten",
   "description": "Visualize react components to improve debugging and development experience.",

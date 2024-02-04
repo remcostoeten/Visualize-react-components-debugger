@@ -23,10 +23,10 @@ function MyComponent() {
       <div>My Component</div>
     </VisualizeComponent>
   );
-}```
+}``````
 
-or
-```jsx
+## or
+``````jsx
 function OtherComp() {
     return (
         <VisualizeComponent border='dashed' color='yellow' width='1px' invert>
@@ -34,4 +34,4 @@ function OtherComp() {
         </VisualizeComponent>
     );
 }
-```
+``````
