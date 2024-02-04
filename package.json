@@ -29,6 +29,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "dotenv": "^16.4.1"
+    "dotenv": "^16.4.1",
+    "visualize-component-debugger": "^1.0.0"
   }
 }
