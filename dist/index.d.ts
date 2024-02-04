@@ -1,3 +1,2 @@
 declare const VisualizeComponent: any;
-
-export { VisualizeComponent };
+export default VisualizeComponent;
