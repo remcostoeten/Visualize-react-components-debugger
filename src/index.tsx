@@ -9,7 +9,7 @@ type visualizeProps = {
     componentName?: string,
     width?: string,
     color?: string,
-    borderTypes?: string,
+    borderTypes?: 'dashed' | 'solid',
     invert?: boolean
 }
 
@@ -17,7 +17,7 @@ interface JSXElements {
     [key: string]: any;
 }
 
-const VisualizeComponent = ({ borderTypes = 'double', showAlert = false, children, width = '10px', color = 'red', invert = false }: visualizeProps) => {
+const VisualizeComponent = ({ borderTypes = 'dashed', showAlert = false, children, width = '10px', color = 'red', invert = false }: visualizeProps) => {
     const [showToast, setShowToast] = useState(false);
 
     if (!devMode) {
@@ -32,23 +32,25 @@ const VisualizeComponent = ({ borderTypes = 'double', showAlert = false, childre
                     bottom: '20px',
                     left: '50%',
                     transform: 'translateX(-50%)',
-                    padding: '10px 55px 10px 20px',
+                    padding: '20px 55px 20px 20px',
                     backgroundColor: invert ? 'white' : '#090909',
                     color: invert ? '#090909' : 'rgb(240 3.7% 15.9%)',
                     borderRadius: '8px',
                     border: '1px solid rgb(240 3.7% 15.9%)',
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+                    zIndex: 9999,
                 }}
             >
                 Component is mounted!
                 <button
                     style={{
                         position: 'absolute',
-                        top: '12px',
+                        top: '21px',
                         right: '20px',
                         background: 'none',
                         border: 'none',
                         cursor: 'pointer',
+                        zIndex: 9999,
                         color: invert ? '#090909' : 'rgb(240 3.7% 15.9%)',
                     }}
                     onClick={() => setShowToast(false)}
@@ -70,11 +72,6 @@ const VisualizeComponent = ({ borderTypes = 'double', showAlert = false, childre
             </div>
         );
     }
-
-    const availableBorderTypes = [
-        'dashed',
-        'solid',
-    ]
 
     useEffect(() => {
         if (showAlert) {
