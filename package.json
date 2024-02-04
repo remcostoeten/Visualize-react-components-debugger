@@ -3,10 +3,10 @@
     "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "name": "visualize-component-package",
+  "name": "visualize-components",
   "version": "0.0.1",
-  "description": "Visualize react components.",
-  "main": "./dist/ndex.js",
+  "description": "Visualize react components to improve debugging and development experience.",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "keywords": [
@@ -17,7 +17,10 @@
     "nextJS"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^17.0.0"
+  },
   "devDependencies": {
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
