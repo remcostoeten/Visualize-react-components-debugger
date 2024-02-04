@@ -17,7 +17,7 @@ interface JSXElements {
     [key: string]: any;
 }
 
-export const VisualizeComponent = ({ border = 'dashed', showAlert = false, children, width = '10px', color = 'red', invert = false }: visualizeProps) => {
+export const VVisualizeComponent = ({ border = 'dashed', showAlert = false, children, width = '10px', color = 'red', invert = false }: visualizeProps) => {
     const [showToast, setShowToast] = useState(false);
 
     if (!devMode) {
@@ -34,7 +34,7 @@ export const VisualizeComponent = ({ border = 'dashed', showAlert = false, child
                     transform: 'translateX(-50%)',
                     padding: '20px 55px 20px 20px',
                     backgroundColor: invert ? 'white' : '#090909',
-                    color: invert ? '#090909' : 'rgb(240 3.7% 15.9%)',
+                    color: invert ? 'black' : 'rgb(240 3.7% 15.9%)',
                     borderRadius: '8px',
                     border: '1px solid rgb(240 3.7% 15.9%)',
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
@@ -87,4 +87,4 @@ export const VisualizeComponent = ({ border = 'dashed', showAlert = false, child
     );
 }
 
-export default VisualizeComponent;
+export default VVisualizeComponent;

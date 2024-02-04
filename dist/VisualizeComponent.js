@@ -28,7 +28,7 @@ exports.VisualizeComponent = void 0;
 const jsx_runtime_1 = require("react/jsx-runtime");
 const react_1 = __importStar(require("react"));
 const devMode = process.env.NODE_ENV !== 'production';
-const VisualizeComponent = ({ borders = 'dashed', showAlert = false, children, width = '10px', color = 'red', invert = false }) => {
+const VisualizeComponent = ({ border = 'dashed', showAlert = false, children, width = '10px', color = 'red', invert = false }) => {
     const [showToast, setShowToast] = (0, react_1.useState)(false);
     if (!devMode) {
         return (0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: children });
@@ -62,7 +62,7 @@ const VisualizeComponent = ({ borders = 'dashed', showAlert = false, children, w
             setShowToast(true);
         }
     }, [showAlert]);
-    return ((0, jsx_runtime_1.jsxs)("div", { style: { outline: `${width} ${borders} ${color}` }, children: [children, showAlert && showToast && toastAlert()] }));
+    return ((0, jsx_runtime_1.jsxs)("div", { style: { outline: `${width} ${border} ${color}` }, children: [children, showAlert && showToast && toastAlert()] }));
 };
 exports.VisualizeComponent = VisualizeComponent;
 exports.default = exports.VisualizeComponent;

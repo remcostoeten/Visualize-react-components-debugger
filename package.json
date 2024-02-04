@@ -3,7 +3,7 @@
     "build": "tsc --build"
   },
   "name": "visualize-component-debugger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Remco Stoeten",
   "description": "Visualize react components to improve debugging and development experience.",
   "main": "./dist/index.js",
@@ -20,7 +20,6 @@
   "files": [
     "dist"
   ],
-  "author": "",
   "license": "MIT",
   "peerDependencies": {
     "react": "*"

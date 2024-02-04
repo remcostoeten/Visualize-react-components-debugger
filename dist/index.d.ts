@@ -8,8 +8,8 @@ type visualizeProps = {
     componentName?: string;
     width?: string;
     color?: string;
-    borders?: 'dashed' | 'solid';
+    border?: 'dashed' | 'solid';
     invert?: boolean;
 };
-export declare const VisualizeComponent: ({ borders, showAlert, children, width, color, invert }: visualizeProps) => any;
+export declare const VisualizeComponent: ({ border, showAlert, children, width, color, invert }: visualizeProps) => any;
 export default VisualizeComponent;
