@@ -9,7 +9,7 @@ type visualizeProps = {
     componentName?: string,
     width?: string,
     color?: string,
-    borderTypes?: 'dashed' | 'solid',
+    border?: 'dashed' | 'solid',
     invert?: boolean
 }
 
@@ -17,7 +17,7 @@ interface JSXElements {
     [key: string]: any;
 }
 
-export const VisualizeComponent = ({ borderTypes = 'dashed', showAlert = false, children, width = '10px', color = 'red', invert = false }: visualizeProps) => {
+export const VisualizeComponent = ({ border = 'dashed', showAlert = false, children, width = '10px', color = 'red', invert = false }: visualizeProps) => {
     const [showToast, setShowToast] = useState(false);
 
     if (!devMode) {
@@ -80,7 +80,7 @@ export const VisualizeComponent = ({ borderTypes = 'dashed', showAlert = false, 
     }, [showAlert]);
 
     return (
-        <div style={{ outline: `${width} ${borderTypes} ${color}` } as JSXElements}>
+        <div style={{ outline: `${width} ${border} ${color}` } as JSXElements}>
             {children}
             {showAlert && showToast && toastAlert()}
         </div>
