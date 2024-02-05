@@ -13,15 +13,11 @@ type visualizeProps = {
     invert?: boolean
 }
 
-interface JSXElements {
-    [key: string]: any;
-}
-
-export const VVisualizeComponent = ({ border = 'dashed', showAlert = false, children, width = '10px', color = 'red', invert = false }: visualizeProps) => {
+const VisualizeComponent = ({ border = 'solid', showAlert = false, children, width = '10px', color = 'red', invert = false }: visualizeProps) => {
     const [showToast, setShowToast] = useState(false);
 
     if (!devMode) {
-        return <>{children}</>;
+        return <>{children}</>
     }
 
     const toastAlert = () => {
@@ -80,11 +76,11 @@ export const VVisualizeComponent = ({ border = 'dashed', showAlert = false, chil
     }, [showAlert]);
 
     return (
-        <div style={{ outline: `${width} ${border} ${color}` } as JSXElements}>
+        <div style={{ outline: `${width} ${border} ${color}` }}>
             {children}
             {showAlert && showToast && toastAlert()}
-        </div>
+        </div >
     );
 }
 
-export default VVisualizeComponent;
+export default VisualizeComponent;
