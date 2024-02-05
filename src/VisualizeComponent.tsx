@@ -30,7 +30,7 @@ const VisualizeComponent = ({ border = 'solid', showAlert = false, children, wid
                     transform: 'translateX(-50%)',
                     padding: '20px 55px 20px 20px',
                     backgroundColor: invert ? 'white' : '#090909',
-                    color: invert ? 'black' : 'rgb(240 3.7% 15.9%)',
+                    color: invert ? 'rgb(240 3.7% 15.9%)' : '#FFFFFF',
                     borderRadius: '8px',
                     border: '1px solid rgb(240 3.7% 15.9%)',
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
