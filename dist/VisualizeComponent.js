@@ -1,34 +1,10 @@
-'use client';
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.VisualizeComponent = void 0;
 const jsx_runtime_1 = require("react/jsx-runtime");
-const react_1 = __importStar(require("react"));
-const devMode = process.env.NODE_ENV !== 'production';
-const VisualizeComponent = ({ border = 'dashed', showAlert = false, children, width = '10px', color = 'red', invert = false }) => {
+const react_1 = require("react");
+const validPorts = ['3000', '3001', '9001', '9000', '8000', '8888'];
+const devMode = validPorts.includes(window.location.port);
+const VisualizeComponent = ({ border = 'solid', showAlert = false, children, width = '10px', color = 'red', invert = false }) => {
     const [showToast, setShowToast] = (0, react_1.useState)(false);
     if (!devMode) {
         return (0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: children });
@@ -41,7 +17,7 @@ const VisualizeComponent = ({ border = 'dashed', showAlert = false, children, wi
                 transform: 'translateX(-50%)',
                 padding: '20px 55px 20px 20px',
                 backgroundColor: invert ? 'white' : '#090909',
-                color: invert ? '#090909' : 'rgb(240 3.7% 15.9%)',
+                color: invert ? 'black' : 'rgb(240 3.7% 15.9%)',
                 borderRadius: '8px',
                 border: '1px solid rgb(240 3.7% 15.9%)',
                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
@@ -64,5 +40,4 @@ const VisualizeComponent = ({ border = 'dashed', showAlert = false, children, wi
     }, [showAlert]);
     return ((0, jsx_runtime_1.jsxs)("div", { style: { outline: `${width} ${border} ${color}` }, children: [children, showAlert && showToast && toastAlert()] }));
 };
-exports.VisualizeComponent = VisualizeComponent;
-exports.default = exports.VisualizeComponent;
+exports.default = VisualizeComponent;

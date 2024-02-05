@@ -8,5 +8,5 @@ type visualizeProps = {
     border?: 'dashed' | 'solid';
     invert?: boolean;
 };
-export declare const VisualizeComponent: ({ border, showAlert, children, width, color, invert }: visualizeProps) => any;
+declare const VisualizeComponent: ({ border, showAlert, children, width, color, invert }: visualizeProps) => import("react/jsx-runtime").JSX.Element;
 export default VisualizeComponent;
