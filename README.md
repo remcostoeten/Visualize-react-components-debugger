@@ -35,3 +35,5 @@ function OtherComp() {
     );
 }
 ```
+
+![image](https://github.com/remcostoeten/Visualize-react-components-debugger/assets/57683378/3d8b02ca-4746-429a-bcac-1b4e38c293d6)
