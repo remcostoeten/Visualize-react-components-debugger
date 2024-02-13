@@ -36,4 +36,4 @@ function OtherComp() {
 }
 ```
 
-![Uploading image.png…]()
+![image](https://github.com/remcostoeten/Visualize-react-components-debugger/assets/57683378/9d95462a-0200-4c41-ba52-8054f413a817)
