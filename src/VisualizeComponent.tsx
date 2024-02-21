@@ -1,8 +1,5 @@
 import React, { ReactNode, useEffect, useState } from "react";
 
-const validPorts = ['3000', '3001', '9001', '9000', '8000', '8888'];
-const devMode = validPorts.includes(window.location.port);
-
 type visualizeProps = {
     showAlert?: boolean,
     children?: ReactNode,
@@ -10,11 +7,13 @@ type visualizeProps = {
     width?: string,
     color?: string,
     border?: 'dashed' | 'solid',
-    invert?: boolean
+    invert?: boolean,
+    validPorts?: string[]
 }
 
-const VisualizeComponent = ({ border = 'solid', showAlert = false, children, width = '10px', color = 'red', invert = false }: visualizeProps) => {
+const VisualizeComponent = ({ border = 'solid', showAlert = false, children, width = '10px', color = 'red', invert = false, validPorts = ['3000', '3001', '9001', '9000', '8000', '8888'] }: visualizeProps) => {
     const [showToast, setShowToast] = useState(false);
+    const devMode = validPorts.includes(window.location.port);
 
     if (!devMode) {
         return <>{children}</>
