@@ -48,3 +48,5 @@ function OtherComp() {
 ```
 
  > :warning: **Experimental**: This component is currently in an experimental stage. While it's functional and can be used, please be aware that it might contain bugs and the API might change in future versions.
+![image](https://github.com/remcostoeten/Visualize-react-components-debugger/assets/57683378/9d95462a-0200-4c41-ba52-8054f413a817)
+
