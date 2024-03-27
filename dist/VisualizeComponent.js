@@ -2,10 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const jsx_runtime_1 = require("react/jsx-runtime");
 const react_1 = require("react");
-const validPorts = ['3000', '3001', '9001', '9000', '8000', '8888'];
-const devMode = validPorts.includes(window.location.port);
-const VisualizeComponent = ({ border = 'solid', showAlert = false, children, width = '10px', color = 'red', invert = false }) => {
+const VisualizeComponent = ({ border = 'solid', showAlert = false, children, width = '10px', color = 'red', invert = false, validPorts = ['3000', '3001', '9001', '9000', '8000', '8888'] }) => {
     const [showToast, setShowToast] = (0, react_1.useState)(false);
+    const devMode = validPorts.includes(window.location.port);
     if (!devMode) {
         return (0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: children });
     }
@@ -17,7 +16,7 @@ const VisualizeComponent = ({ border = 'solid', showAlert = false, children, wid
                 transform: 'translateX(-50%)',
                 padding: '20px 55px 20px 20px',
                 backgroundColor: invert ? 'white' : '#090909',
-                color: invert ? 'black' : 'rgb(240 3.7% 15.9%)',
+                color: invert ? 'rgb(240 3.7% 15.9%)' : '#FFFFFF',
                 borderRadius: '8px',
                 border: '1px solid rgb(240 3.7% 15.9%)',
                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
