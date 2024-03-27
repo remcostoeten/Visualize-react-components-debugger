@@ -6,7 +6,6 @@
 
 - `showAlert` (optional): A boolean that determines whether to show the alert toast when the component is mounted. Default is `false`.
 - `children` (optional): The child components to be rendered within this component.
-- `componentName` (optional): The name of the component. This is not used in the current version of the component.
 - `width` (optional): The width of the outline that visualizes the component. Default is `'10px'`.
 - `color` (optional): The color of the outline that visualizes the component. Default is `'red'`.
 - `border` (optional): The style of the border that visualizes the component. Can be either `'dashed'` or `'solid'`. Default is `'dashed'`.
@@ -15,7 +14,7 @@
 
 ## Usage
 
-Pick your posion
+Pick your poison
 
 ### `npm install @remcostoeten/visualize-component-debugger`
 
