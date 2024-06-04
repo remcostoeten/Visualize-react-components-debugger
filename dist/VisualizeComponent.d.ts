@@ -5,9 +5,9 @@ type visualizeProps = {
     componentName?: string;
     width?: string;
     color?: string;
-    border?: 'dashed' | 'solid';
+    border?: "dashed" | "solid";
     invert?: boolean;
     validPorts?: string[];
 };
-declare const VisualizeComponent: ({ border, showAlert, children, width, color, invert, validPorts }: visualizeProps) => import("react/jsx-runtime").JSX.Element;
+declare const VisualizeComponent: ({ border, showAlert, children, width, color, invert, validPorts, }: visualizeProps) => any;
 export default VisualizeComponent;

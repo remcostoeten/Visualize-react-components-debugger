@@ -10,7 +10,7 @@
 - `color` (optional): The color of the outline that visualizes the component. Default is `'red'`.
 - `border` (optional): The style of the border that visualizes the component. Can be either `'dashed'` or `'solid'`. Default is `'dashed'`.
 - `invert` (optional): A boolean that determines the color scheme of the toast alert. If `true`, the toast alert will have a light theme. If `false`, it will have a dark theme. Default is `false`.
-- `validPorts` (optional): An array of strings representing the ports that are considered as development ports. If the application is running on one of these ports, it is considered to be in development mode. Default is `['3000', '3001', '9001', '9000', '8000', '8888']` *POC*.
+- `validPorts` (optional): An array of strings representing the ports that are considered as development ports. If the application is running on one of these ports, it is considered to be in development mode. Default is `['3000', '3001', '9001', '9000', '8000', '8888']` _POC_.
 
 ## Usage
 
@@ -24,9 +24,8 @@ Pick your poison
 
 ### `bun install @remcostoeten/visualize-component-debugger`
 
-
 ```jsx
-import VisualizeComponent from './VisualizeComponent';
+import VisualizeComponent from "./VisualizeComponent";
 
 function MyComponent() {
   return (
@@ -39,14 +38,13 @@ function MyComponent() {
 // or
 
 function OtherComp() {
-    return (
-        <VisualizeComponent border='dashed' color='yellow' width='1px' invert>
-            <h2>v hard to debug</h2>
-        </VisualizeComponent>
-    );
+  return (
+    <VisualizeComponent border="dashed" color="yellow" width="1px" invert>
+      <h2>v hard to debug</h2>
+    </VisualizeComponent>
+  );
 }
 ```
 
- > :warning: **Experimental**: This component is currently in an experimental stage. While it's functional and can be used, please be aware that it might contain bugs and the API might change in future versions.
-![image](https://github.com/remcostoeten/Visualize-react-components-debugger/assets/57683378/9d95462a-0200-4c41-ba52-8054f413a817)
-
+> :warning: **Experimental**: This component is currently in an experimental stage. While it's functional and can be used, please be aware that it might contain bugs and the API might change in future versions.
+> ![image](https://github.com/remcostoeten/Visualize-react-components-debugger/assets/57683378/9d95462a-0200-4c41-ba52-8054f413a817)

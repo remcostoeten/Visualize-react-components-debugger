@@ -1,3 +1,3 @@
-import VisualizeComponent from './VisualizeComponent';
+import VisualizeComponent from "./VisualizeComponent";
 
 export default VisualizeComponent;

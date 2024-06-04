@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "typecheck": "tsc --noEmit",
+    "format:write": "prettier --write \"**/*.{ts,tsx,mdx,css,scss,json,md}\" --cache",
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx,css,scss,json,md}\" --cache"
   },
   "name": "@remcostoeten/visualize-component-debugger",
   "version": "1.0.7",
